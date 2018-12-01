@@ -1,6 +1,6 @@
 /**
  * MIT License
- * Copyright (c) 2018 Nantha Kumar Sunder, Sarthak Mahajan, Chein Te Lee
+ * Copyright (c) 2018 Nantha Kumar Sunder
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -20,16 +20,16 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-#include <gtest/gtest.h>
-#include <gmock/gmock.h>
+#pragma once
+#include <iostream>
+#include "gmock/gmock.h"
+#include "../include/add.h"
+#include "../include/pid.h"
 /**
- *  @brief main function to test the pid controller
- *  @param argc is the number of argument
- *  @param argv is the arguments
- *  @return None
+ * @brief Class to use gmock and test addition
+ * @return none
  */
-int main(int argc, char** argv) {
-  ::testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
-}
-
+class mockAdd : public addition {
+ public:
+  MOCK_METHOD2(computeAddition, double(double num1, double num2));
+};
