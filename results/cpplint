@@ -1,0 +1,11 @@
+Done processing app/pid.cpp
+Done processing app/main.cpp
+Done processing app/add.cpp
+include/pid.h:47:  Single-parameter constructors should be marked explicit.  [runtime/explicit] [5]
+Done processing include/pid.h
+Done processing include/add.h
+Done processing test/pid_test.cpp
+Done processing test/main.cpp
+Done processing test/include/mockAdd.h
+Total errors found: 1
+
